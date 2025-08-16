@@ -1,26 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog01</title>
-</head>
-<body>
-    <header>Blog01</header>
+{% extends 'blog/base.html' %}
+
+{% block content %}
     {% for post in posts %}
-        <article>
-           
-            <h2>{{post.title}}</h2> 
-            <time>Published: {{post.published_date}}</time>
+        <article class="post">
+        
+            <time class="date">Published: {{post.published_date}}</time>
+            <h2><a href="{% url 'post_detail' pk=post.pk %}">{{post.title}}</a></h2> 
             <p>{{post.text|linebreaksbr}}</p>
         </article>
     {% endfor %}
-    <article>
-        <h4>Now to end.</h4>
-        <p>
-            This is just a basic page, so this much should be enough.
-        </p>
-    </article>
-   
-</body>
-</html>
+{% endblock %}
