@@ -32,23 +32,22 @@ h1, h2, h3, h4{
     color: #828282;
     
 }
- .save{
+/* .save{
     float: right;
 
-} 
-.post-form textarea,
+} */
+/* .post-form textarea,
 .post-form input{
     width: 100%;
-}
-.top-menu,
+} */
+/* .top-menu,
 .top-menu:hover,
 .top-menu:visited{
     color: #ffffff;
     float: right;
     font-size: 26pt;
     margin-right: 20px;
-}
-
+} */
 .post{
     margin-bottom: 70px;
 }
@@ -60,7 +59,7 @@ h1, h2, h3, h4{
 .post > .actions{
     float:inline-end;
 }
-.btn-secondary,
+/* .btn-secondary,
 .btn-secondary:visited{
  color: #c25100;
  background: none;
@@ -70,4 +69,4 @@ h1, h2, h3, h4{
 .btn-secondary:hover{
     color: #ffffff;
     background-color: #c25100;
-} 
+} */
