@@ -65,6 +65,7 @@ h1, h2, h3, h4{
  color: #c25100;
  background: none;
  border-color: #c25100;
+ /* width: 30px; */
  margin-left: 15px;
 }
 .btn-secondary:hover{

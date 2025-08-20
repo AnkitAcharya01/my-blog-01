@@ -6,7 +6,11 @@
         {% csrf_token %}
         
         {{ form.as_p }}
-        <button type="submit" class="save btn btn-secondary">Save</button>
-
-    </form>
+        {% if post.published_date %}
+            <button type="submit" name="publish" class="btn btn-secondary">Publish</button>
+        {% else %}     
+            <button type="submit" name="draft" class="save btn btn-secondary">Save as Draft</button>
+            <button type="submit" name="publish" class="btn btn-secondary">Save</button>
+        {% endif %}    
 {% endblock %}
+    
