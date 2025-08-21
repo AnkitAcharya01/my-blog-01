@@ -2,11 +2,11 @@
 
 {% block content %}
     {% for post in posts %}
-        <article class="post">
+        <article class="post postbox">
         
             <time class="date">Published: {{post.published_date}}</time>
             <h2><a href="{% url 'post_detail' pk=post.pk %}">{{post.title}}</a></h2> 
-            <p>{{post.text|linebreaksbr}}</p>
+            <p class="description">{{post.text|linebreaksbr}}</p>
         </article>
     {% endfor %}
 {% endblock %}
