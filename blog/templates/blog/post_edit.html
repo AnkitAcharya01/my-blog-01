@@ -7,10 +7,10 @@
         
         {{ form.as_p }}
         {% if post.published_date %}
-            <button type="submit" name="publish" class="btn btn-secondary">Publish</button>
+            <button type="submit" name="publish" class="btn btn-secondary">Save changes</button>
         {% else %}     
             <button type="submit" name="draft" class="save btn btn-secondary">Save as Draft</button>
-            <button type="submit" name="publish" class="btn btn-secondary">Save</button>
+            <button type="submit" name="publish" class="btn btn-secondary">Publish</button>
         {% endif %}    
 {% endblock %}
     

@@ -14,11 +14,13 @@
     <header class="page-header">
         <div class="container">
             {% if user.is_authenticated %}
-                <a href="{% url 'post_new' %}" class="top-menu">
-                    {% include './icons/file-earmark-plus.svg' %}
-                </a>
-                <a href="{% url 'post_draft_list' %}" class="top-menu">
+                <a href="{% url 'post_draft_list' %}" class="draftbtn top-menu">
+                    <h6>See Drafts </h6>
                     {% include './icons/pencil-fill.svg' %}</a>
+                </a>
+                <a href="{% url 'post_new' %}" class="addbtn top-menu">
+                    <h6>Add </h6>
+                    {% include './icons/file-earmark-plus.svg' %}
                 </a>
             {% endif %}
             <h1><a href="/">Blog01</a></h1>

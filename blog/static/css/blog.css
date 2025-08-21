@@ -55,6 +55,7 @@ h1, h2, h3, h4{
 .post h2 a,
 .post h2 a:visited{
     color: #000000;
+    text-decoration: none;
 }
 .post > .date,
 .post > .actions{
@@ -72,3 +73,36 @@ h1, h2, h3, h4{
     color: #ffffff;
     background-color: #c25100;
 } 
+.addbtn{
+    width: 70px;
+    height: 40px;
+    /* border: 1px solid rgb(197, 2, 2); */
+    border-radius: 12px;
+    box-shadow: 2px 1px 5px rgb(150, 22, 0) inset;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-decoration: none;
+}
+/* .addbtn svg{
+    /* height: 20px;
+    width: 20px; */
+    
+    /* fill:blue; 
+} */
+.draftbtn{
+    box-shadow: 2px 1px 5px rgb(150, 22, 0) inset;
+    border-radius: 12px;
+    height: 40px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-decoration: none;
+
+}
+.draftbtn svg{
+    height: 12px;
+    width: 12px;
+}
+
