@@ -10,8 +10,8 @@ body{
     margin-bottom: 40px;
     margin-left: 0;
     padding: 20px 20px 20px 40px;
-    
-    
+    text-shadow: 1px 1px 2px red;
+  
 }
 
 .page-header h1,
@@ -115,4 +115,57 @@ h1, h2, h3, h4{
     border: 1px solid rgb(234, 234, 234);
     border-radius: 6px;
     padding: 5px;
+}
+#logout_text{
+    font-family: 'Lobster', cursive;
+    text-decoration: none;
+    float: right;
+    color: antiquewhite;
+    text-shadow: 1px 1px 1px black;
+    box-shadow: 2px 1px 5px rgb(150, 22, 0) inset;
+    background: transparent;
+    border: none;
+    border-radius: 12px;
+    font-size:medium;
+    height: 40px;
+    width: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+small a,
+small a:hover,
+small a:visited{
+    font-size: 15pt;
+    color: white;
+}
+#logout{
+   text-shadow: 2px 2px 2px black;  
+   border: 1px solid black;
+   display: flex;
+   justify-content:flex-start;
+   
+}
+#greet{
+    float:right;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    color: wheat;
+}
+.comment{
+    margin: 20px 0 20px 20px;
+}
+.comment_count{
+    text-decoration: none;
+    color: rgb(176, 147, 95);
+}
+#add_a_comment_text{
+    text-decoration: none;
+    color: #cb730e;
+    border: 1px solid rgb(145, 121, 77);
+    border-radius: 4px;
+    
 }

@@ -7,6 +7,12 @@
             <time class="date">Published: {{post.published_date}}</time>
             <h2><a href="{% url 'post_detail' pk=post.pk %}">{{post.title}}</a></h2> 
             <p class="description">{{post.text|linebreaksbr}}</p>
+            <a href="{% url 'post_detail' pk=post.pk %}" class="comment_count">
+                {% if post.comments.count == 1 %}
+                    1 comment
+                {% else %}
+                    {{ post.comments.count }} comments</a>
+                {% endif %}
         </article>
     {% endfor %}
 {% endblock %}
