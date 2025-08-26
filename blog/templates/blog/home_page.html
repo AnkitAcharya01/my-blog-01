@@ -13,8 +13,8 @@
                 {{ post.first_published_at }}   
             </time>
             <h2><a href="{% pageurl post %}">{{ post.title }}</a></h2>
-            {{ post.specific.intro }}
-            {{ post.specific.body|richtext }}
+            <p>{{ post.specific.intro }}</p>
+            <div>{{ post.specific.body|richtext }}</div>
         </article>
     {% endfor %}
 {% endblock %}

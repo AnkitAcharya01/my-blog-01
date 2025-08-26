@@ -7,11 +7,6 @@ from wagtail.fields import RichTextField
 from wagtail.admin.panels import FieldPanel
 from wagtail.search import index
 
-class HomePage(Page):
-    intro = RichTextField(blank=True)
-    content_panels = Page.content_panels + [
-        FieldPanel('intro')
-    ]
 
 class Post(models.Model):
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE) 
@@ -52,13 +47,22 @@ class Comment(models.Model):
 
 
 
+class HomePage(Page):
+    intro = RichTextField(blank=True)
+
+    subpage_types = ['blog.BlogPage']
+    content_panels = Page.content_panels + [
+        FieldPanel('intro')
+    ]
+
 class BlogPage(Page):
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, null=True, blank=True)
     date = models.DateField("Post date")
     intro = models.CharField(max_length=250)
     text = RichTextField(blank=True)
-    # parent_page_types = ['wagtailcore.Page']
-    # subpage_types = []
+
+    parent_page_types = ['blog.HomePage']
+   
 
     search_fields = Page.search_fields + [
         index.SearchField('intro'),
